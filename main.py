@@ -15,6 +15,7 @@ def on_chat_message(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print('Chat Message:', content_type, chat_type, chat_id)
 
+
 def on_callback_query(msg):
     query_id, from_id, data = telepot.glance(msg, flavor='callback_query')
     print('Callback query:', query_id, from_id, data)
@@ -48,7 +49,7 @@ async def init(app, bot):
 
 
 TOKEN = '844914308:AAGaJiIHBTV8d-84DgZbRsDU7qQO_8WFSvE'
-URL = sys.argv[3]
+URL = 'https://sakhacash.herokuapp.com'
 
 loop = asyncio.get_event_loop()
 
